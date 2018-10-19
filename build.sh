@@ -35,7 +35,7 @@ function publish_container() {
     echo "Docker push faild"
     exit 1
   fi
-  docker push ${CONTAINER_NAME}
+  docker push ${CONTAINER_NAME}:latest
 
   if [ $? -ne 0 ]; then
     echo "Docker push to tag latest failed"
